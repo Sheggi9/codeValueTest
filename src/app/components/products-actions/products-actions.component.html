@@ -1,0 +1,18 @@
+<!--<button class="btn add" (click)="addNewProduct()">+ Add</button>-->
+<button class="btn add" [routerLink]="['/products', 'new']">+ Add</button>
+
+<div class="search-products">
+  <div class="icon"></div>
+  <input class="input" [formControl]="searchText" placeholder="search products" type="text">
+</div>
+
+
+<div class="sort-products">
+  <label for="sort-by-select">Sort by</label>
+  <select [formControl]="sortBy" id="sort-by-select">
+    @for (optValue of sortByValues; track optValue[0]) {
+      <option [value]="optValue[0]" selected>{{optValue[1]}}</option>
+    }
+  </select>
+</div>
+

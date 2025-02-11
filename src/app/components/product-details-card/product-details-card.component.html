@@ -1,0 +1,30 @@
+<div [formGroup]="profileForm" class="product-details-card">
+
+  <h3 class="header">{{profileForm.get('name')?.value}} Details</h3>
+
+  <img width="80" height="80" ngSrc="https://pbs.twimg.com/media/FWhKeLPXoAEG8WD.jpg">
+
+  <div class="form-control name">
+    <label for="name">Name</label>
+    <input formControlName="name" id="name" type="text" class="name">
+
+  </div>
+
+  <div class="form-control description">
+    <label for="description">Description</label>
+    <textarea formControlName="description" id="description" type="text" class="description" rows="5" cols="33">
+    </textarea>
+  </div>
+
+  <div class="form-control price">
+    <label for="price">Price</label>
+    <div>
+      <input [min]="1" type="number" formControlName="price" id="price" class="price">
+      <span>$</span>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button (click)="saveProduct()" [disabled]="!profileForm.valid" class="btn add">Save</button>
+  </div>
+</div>

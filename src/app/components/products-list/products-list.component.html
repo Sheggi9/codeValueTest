@@ -1,0 +1,4 @@
+@for (product of productList(); track product.id) {
+<!--  <app-product-card (click)="showProductDetails(product)" [product]="product"></app-product-card>-->
+  <app-product-card [routerLink]="['/products', product.id]" [product]="product"></app-product-card>
+}

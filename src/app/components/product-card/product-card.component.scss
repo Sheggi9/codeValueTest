@@ -1,0 +1,31 @@
+:host {
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  .card {
+    display: flex;
+    padding: 10px;
+    border: 1px solid #ddd;
+    position: relative;
+
+    &-item {
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.actions {
+        position: absolute;
+        right: 10px;
+        bottom: 10px;
+
+        .btn {
+          &.delete {
+            background: #E69138;
+          }
+        }
+      }
+    }
+  }
+}

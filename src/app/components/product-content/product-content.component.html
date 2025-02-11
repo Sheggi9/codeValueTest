@@ -1,0 +1,18 @@
+<app-header></app-header>
+<div class="content">
+  <div class="products">
+    <div class="products-actions">
+      <app-products-actions #productsActionsComponent [productList]="productsService.productList()"></app-products-actions>
+    </div>
+    <div class="products-list">
+      <app-products-list [productList]="productsActionsComponent.computedProducts()"></app-products-list>
+    </div>
+  </div>
+
+  <div class="product-details">
+<!--    @if (productsService.productDetails()) {-->
+<!--      <app-product-details-card [productDetails]="productsService.productDetails()!"></app-product-details-card>-->
+<!--    }-->
+    <router-outlet></router-outlet>
+  </div>
+</div>

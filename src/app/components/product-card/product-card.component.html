@@ -1,0 +1,10 @@
+<div class="card">
+  <img class="card-item img" width="40" height="40" ngSrc="https://pbs.twimg.com/media/FWhKeLPXoAEG8WD.jpg" alt="">
+  <div class="card-item details">
+    <div class="card-title">{{product().name}}</div>
+    <div class="card-description">{{product().description}}</div>
+  </div>
+  <div class="card-item actions">
+    <button class="btn delete" (click)="deleteProduct($event)">Delete</button>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .search-products {
+    position: relative;
+    .icon {
+      position: absolute;
+      height: 28px;
+      width: 28px;
+      background: url("../../img/search_icon.svg") no-repeat center center;
+    }
+    .input {
+      padding: 0 0 0 28px;
+    }
+  }
+
+
+  .btn {
+    &.add {
+      background: #B6D7A8;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+:host {
+  .product-details-card {
+    position: relative;
+    border: 1px solid;
+    padding: 20px 10px 10px 10px;
+    .header {
+      padding: 0 10px;
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(+5px, -50%);
+    }
+    .form-control {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .actions {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      .btn {
+        &.add {
+          background: #B6D7A8;
+        }
+      }
+    }
+
+    #price {
+      margin-right: 5px;
+    }
+  }
+}

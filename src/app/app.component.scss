@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh);
+  width: 100vw;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  padding: 20px 40px;
+  height: 100%;
+  gap: 20px;
+
+  .products, .product-details {
+    flex: 1;
+  }
+}
