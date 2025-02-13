@@ -48,6 +48,8 @@ export class ProductDetailsCardComponent implements OnInit {
         description: this.profileForm.get('description')!.value!,
       }
       this.productsService.saveProduct(this.product)
+      this.profileForm.reset();
+      this.product = null;
     } else {
       this.productsService.saveProduct({
         id: (Number.parseInt(this.product!.id) + 1).toString(),
@@ -59,8 +61,6 @@ export class ProductDetailsCardComponent implements OnInit {
     }
 
     this.productsService.saveData();
-    this.profileForm.reset();
-    this.product = null;
   }
 
   ngOnInit(): void {
